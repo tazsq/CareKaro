@@ -2,6 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Activity, Menu, X } from "lucide-react";
 import { useState } from "react";
+import Login from "../pages/login.tsx";
+import Signup from "@/pages/signup.tsx";
 
 const Navbar = () => {
   const location = useLocation();
@@ -47,8 +49,12 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline">Login</Button>
-            <Button>Sign Up</Button>
+            <Link to="/Login">
+              <Button variant="outline">Login</Button>
+            </Link>
+            <Link to="/signup">
+              <Button>Sign Up</Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -85,7 +91,9 @@ const Navbar = () => {
               <Button variant="outline" className="w-full">
                 Login
               </Button>
-              <Button className="w-full">Sign Up</Button>
+              <Link to="/signup">
+                <Button className="w-full">Sign Up</Button>
+              </Link>
             </div>
           </div>
         )}
