@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Outlet } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import {
   Upload,
