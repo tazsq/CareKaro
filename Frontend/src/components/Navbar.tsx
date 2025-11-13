@@ -60,7 +60,6 @@ const Navbar = () => {
               <Popover>
                 <PopoverTrigger asChild>
                   <Avatar>
-                    {"Welcome back, "}
                     <AvatarImage
                       src={user.photoURL}
                       alt="photo"
